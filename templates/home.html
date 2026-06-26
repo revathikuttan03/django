@@ -6,11 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="create/"><button>create</button></a>
 
     <h1>myhome page</h1>
     {% for i in datas %}
     <p>name:{{ i.name }}</p>
     <p>place:{{ i.description }}</p>
+    <p>status:{{ i.status }}</p>
     <hr>
     {% endfor %}
 
