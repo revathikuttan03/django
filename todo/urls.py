@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home),
     path('create/',views.create),
+    path('update/<int:tid>/',views.update),
 ]

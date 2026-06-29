@@ -9,9 +9,11 @@
     <a href="create/"><button>create</button></a>
 
     <h1>myhome page</h1>
-    {% for i in datas %}
-    <p>name:{{ i.name }}</p>
-    <p>place:{{ i.description }}</p>
+    {% for i in dts %}
+    
+    <p>Task Name:{{ i.name }}</p>
+    <p>Description:{{ i.description }}</p>
+    <a href="update/{{i.id}}/"><button>Update</button></a>
     <p>status:{{ i.status }}</p>
     <hr>
     {% endfor %}
