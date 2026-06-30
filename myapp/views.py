@@ -29,6 +29,21 @@ def update(request,tid):
        name = request.GET.get("name")
        description = request.GET.get("description")
        status = request.GET.get("status")
-       print(name)
+       data.name = name
+       data.description = description
+       data.status = status
+       data.save()
+       return redirect("/")
     
     return render(request,'update.html',{'d':data})
+
+
+def delete(request,tid):
+    data = TaskList.objects.get(id=tid)
+    data.delete()
+    return redirect("/")
+
+def completedwork(request,pk):
+    data = TaskList.objects.get(id=pk)
+    data.status = "completed"
+    return redirect("/")

@@ -14,6 +14,10 @@
     <p>Task Name:{{ i.name }}</p>
     <p>Description:{{ i.description }}</p>
     <a href="update/{{i.id}}/"><button>Update</button></a>
+    <a href="delete/{{i.id}}/"><button>delete</button></a>
+    {% if i.status == "pending" %}
+    <a href="completedwork/{{i.id}}/"><button>completed work</button></a>
+    {% endif %}
     <p>status:{{ i.status }}</p>
     <hr>
     {% endfor %}
